@@ -1,0 +1,72 @@
+.bg-red {
+    background-color: red;
+    opacity: 0.8;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.margin-10 {
+    margin: 10px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+body {
+    background-color: #202020 !important;
+}
+
+.comic-card {
+    position: relative;
+    width: 178px;
+    height: auto;
+}
+
+.comic-card > .comic-favorite-img {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 30px;
+    height: 27px;
+    background: url("http://localhost:3001/assets/heart_off.png") 30px 27px;
+}
+
+.comic-card > .comic-title {
+    position: absolute;
+    bottom: 0px;
+    width: 168px;
+    height: 55px;
+    background-color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.comic-card:hover, .comic-card-active {
+    border: 5px solid red;
+}
+
+.comic-card:hover .comic-image {
+    display: block;
+    background: rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.comic-favorite-img, .comic-title { opacity: 0; }
+.comic-card:hover .comic-favorite-img,
+.comic-card:hover .comic-title,
+.comic-card-active .comic-favorite-img,
+.comic-card-active .comic-title {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.comic-favorite-img:hover {
+    background: url("http://localhost:3001/assets/heart_hover.png") 30px 27px;
+}
+
+.comic-card-active .comic-favorite-img {
+    background: url("http://localhost:3001/assets/heart_on.png") 35px 32px;
+}
