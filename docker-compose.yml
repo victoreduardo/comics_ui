@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  app:
+    container_name: dockerized-react-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '3001:3000'
+    environment:
+      - NODE_ENV=development
+    networks:
+      - default
+      - comic_ui
+
+networks:
+  comic_ui:
+    name: comic
